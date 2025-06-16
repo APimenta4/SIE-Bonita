@@ -8,6 +8,9 @@
                 <field type="LONG" length="255" name="numeroIncidente" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="identificacaoProduto" nullable="false" collection="false"/>
                 <field type="LONG" length="255" name="codigoProduto" nullable="false" collection="false"/>
+        <businessObject qualifiedName="com.company.model.BusinessObject">
+            <fields>
+                <field type="STRING" length="255" name="attribute" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -40,6 +43,13 @@
                 <field type="STRING" length="255" name="estado" nullable="false" collection="false"/>
                 <field type="TEXT" length="255" name="descricaoProblema" nullable="false" collection="false"/>
                 <field type="BOOLEAN" length="255" name="assinado" nullable="true" collection="false"/>
+        <businessObject qualifiedName="com.company.model.Encomenda">
+            <fields>
+                <field type="LONG" length="255" name="id" nullable="false" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="dataRececao" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="estado" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="reclamacaoAdequada" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="notaNaoConformidade" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -61,6 +71,14 @@
             <fields>
                 <field type="STRING" length="255" name="identificacaoProduto" nullable="false" collection="false"/>
                 <relationField type="AGGREGATION" reference="com.company.model.Etiqueta" fetchType="LAZY" name="etiqueta" nullable="true" collection="false"/>
+        <businessObject qualifiedName="com.company.model.NotaNaoConformidade">
+            <fields>
+                <field type="LONG" length="255" name="id" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="descricao" nullable="false" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="criadaEm" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="responsavel" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="acoesAplicadas" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="armazenamentoNoSharepoint" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
