@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0">
     <businessObjects>
+
         <businessObject qualifiedName="com.company.model.Etiqueta">
             <fields>
                 <field type="STRING" length="255" name="tipo" nullable="false" collection="false"/>
@@ -13,6 +14,16 @@
             <queries/>
             <indexes/>
         </businessObject>
+
+        <businessObject qualifiedName="com.company.model.BusinessObject">
+            <fields>
+                <field type="STRING" length="255" name="attribute" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+
         <businessObject qualifiedName="com.company.model.FolhaRececao">
             <fields>
                 <field type="STRING" length="255" name="cliente" nullable="false" collection="false"/>
@@ -24,6 +35,7 @@
             <queries/>
             <indexes/>
         </businessObject>
+
         <businessObject qualifiedName="com.company.model.Incidente">
             <fields>
                 <relationField type="AGGREGATION" reference="com.company.model.FolhaRececao" fetchType="LAZY" name="folhaRececao" nullable="true" collection="false"/>
@@ -33,6 +45,7 @@
             <queries/>
             <indexes/>
         </businessObject>
+
         <businessObject qualifiedName="com.company.model.PedidoServico">
             <fields>
                 <field type="LOCALDATETIME" length="255" name="dataAbertura" nullable="true" collection="false"/>
@@ -45,6 +58,20 @@
             <queries/>
             <indexes/>
         </businessObject>
+
+        <businessObject qualifiedName="com.company.model.Encomenda">
+            <fields>
+                <field type="LONG" length="255" name="id" nullable="false" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="dataRececao" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="estado" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="reclamacaoAdequada" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="notaNaoConformidade" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+
         <businessObject qualifiedName="com.company.model.PedidoSuporte">
             <fields>
                 <field type="STRING" length="255" name="assunto" nullable="false" collection="false"/>
@@ -57,6 +84,7 @@
             <queries/>
             <indexes/>
         </businessObject>
+
         <businessObject qualifiedName="com.company.model.Produto">
             <fields>
                 <field type="STRING" length="255" name="identificacaoProduto" nullable="false" collection="false"/>
@@ -66,5 +94,20 @@
             <queries/>
             <indexes/>
         </businessObject>
+
+        <businessObject qualifiedName="com.company.model.NotaNaoConformidade">
+            <fields>
+                <field type="LONG" length="255" name="id" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="descricao" nullable="false" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="criadaEm" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="responsavel" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="acoesAplicadas" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="armazenamentoNoSharepoint" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+
     </businessObjects>
 </businessObjectModel>
