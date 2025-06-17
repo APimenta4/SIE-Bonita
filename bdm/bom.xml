@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0">
     <businessObjects>
-
-        <businessObject qualifiedName="com.company.model.Etiqueta">
-            <fields>
-                <field type="STRING" length="255" name="tipo" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="nomeCliente" nullable="false" collection="false"/>
-                <field type="LONG" length="255" name="numeroIncidente" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="identificacaoProduto" nullable="false" collection="false"/>
-                <field type="LONG" length="255" name="codigoProduto" nullable="false" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-
         <businessObject qualifiedName="com.company.model.BusinessObject">
             <fields>
                 <field type="STRING" length="255" name="attribute" nullable="true" collection="false"/>
@@ -23,42 +9,6 @@
             <queries/>
             <indexes/>
         </businessObject>
-
-        <businessObject qualifiedName="com.company.model.FolhaRececao">
-            <fields>
-                <field type="STRING" length="255" name="cliente" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.Produto" fetchType="LAZY" name="produto" nullable="false" collection="false"/>
-                <field type="LONG" length="255" name="numeroIncidente" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="recepcionario" nullable="false" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-
-        <businessObject qualifiedName="com.company.model.Incidente">
-            <fields>
-                <relationField type="AGGREGATION" reference="com.company.model.FolhaRececao" fetchType="LAZY" name="folhaRececao" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="dataAbertura" nullable="false" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-
-        <businessObject qualifiedName="com.company.model.PedidoServico">
-            <fields>
-                <field type="LOCALDATETIME" length="255" name="dataAbertura" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.PedidoSuporte" fetchType="LAZY" name="pedidoSuporte" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="estado" nullable="false" collection="false"/>
-                <field type="TEXT" length="255" name="descricaoProblema" nullable="false" collection="false"/>
-                <field type="BOOLEAN" length="255" name="assinado" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-
         <businessObject qualifiedName="com.company.model.Encomenda">
             <fields>
                 <field type="LONG" length="255" name="id" nullable="false" collection="false"/>
@@ -71,30 +21,38 @@
             <queries/>
             <indexes/>
         </businessObject>
-
-        <businessObject qualifiedName="com.company.model.PedidoSuporte">
+        <businessObject qualifiedName="com.company.model.Etiqueta">
             <fields>
-                <field type="STRING" length="255" name="assunto" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="corpo" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="email" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="nome" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="contactoTelefonico" nullable="false" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-
-        <businessObject qualifiedName="com.company.model.Produto">
-            <fields>
+                <field type="STRING" length="255" name="tipo" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="nomeCliente" nullable="false" collection="false"/>
+                <field type="LONG" length="255" name="numeroIncidente" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="identificacaoProduto" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.Etiqueta" fetchType="LAZY" name="etiqueta" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="codigoProduto" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
             <indexes/>
         </businessObject>
-
+        <businessObject qualifiedName="com.company.model.FolhaRececao">
+            <fields>
+                <field type="STRING" length="255" name="cliente" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Produto" fetchType="LAZY" name="produto" nullable="false" collection="false"/>
+                <field type="LONG" length="255" name="numeroIncidente" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="recepcionario" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Incidente">
+            <fields>
+                <relationField type="AGGREGATION" reference="com.company.model.FolhaRececao" fetchType="LAZY" name="folhaRececao" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="dataAbertura" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
         <businessObject qualifiedName="com.company.model.NotaNaoConformidade">
             <fields>
                 <field type="LONG" length="255" name="id" nullable="false" collection="false"/>
@@ -108,6 +66,38 @@
             <queries/>
             <indexes/>
         </businessObject>
-
+        <businessObject qualifiedName="com.company.model.PedidoServico">
+            <fields>
+                <field type="LOCALDATETIME" length="255" name="dataAbertura" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.PedidoSuporte" fetchType="LAZY" name="pedidoSuporte" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="estado" nullable="false" collection="false"/>
+                <field type="TEXT" length="255" name="descricaoProblema" nullable="false" collection="false"/>
+                <field type="BOOLEAN" length="255" name="assinado" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.PedidoSuporte">
+            <fields>
+                <field type="STRING" length="255" name="assunto" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="corpo" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="email" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="nome" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="contactoTelefonico" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Produto">
+            <fields>
+                <field type="STRING" length="255" name="identificacaoProduto" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Etiqueta" fetchType="LAZY" name="etiqueta" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
     </businessObjects>
 </businessObjectModel>
