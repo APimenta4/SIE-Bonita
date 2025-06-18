@@ -28,6 +28,8 @@
                 <field type="LONG" length="255" name="numeroIncidente" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="identificacaoProduto" nullable="false" collection="false"/>
                 <field type="LONG" length="255" name="codigoProduto" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="descricao" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="delegacaoDestino" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
