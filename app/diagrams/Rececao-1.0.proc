@@ -818,7 +818,7 @@
               <styles xmi:type="notation:DescriptionStyle" xmi:id="_kuLyU0xAEfCM0prHvYE6XA"/>
               <styles xmi:type="notation:FontStyle" xmi:id="_kuLyVExAEfCM0prHvYE6XA" fontName="Segoe UI"/>
               <styles xmi:type="notation:LineStyle" xmi:id="_kuLyVUxAEfCM0prHvYE6XA"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kuLyVkxAEfCM0prHvYE6XA" x="89" y="472" width="115" height="53"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kuLyVkxAEfCM0prHvYE6XA" x="117" y="500" width="115" height="53"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_KjRSwTWFEfCxL9oa-scBGQ"/>
