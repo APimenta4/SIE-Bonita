@@ -13,27 +13,139 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_KjWLSDWFEfCxL9oa-scBGQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_KjWLRzWFEfCxL9oa-scBGQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_KjWLSjWFEfCxL9oa-scBGQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_KjWLSzWFEfCxL9oa-scBGQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_OzpHcExdEfCvLMo-Ilf_dg" name="newForm7" content="f91c3466-cce5-4158-a15e-162f9afb607f" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_KjWLSTWFEfCxL9oa-scBGQ"/>
+          <contract xmi:type="process:Contract" xmi:id="_KjWLSTWFEfCxL9oa-scBGQ">
+            <inputs xmi:type="process:ContractInput" xmi:id="_L5RoEExdEfCvLMo-Ilf_dg" name="booleano">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_L5RoEUxdEfCvLMo-Ilf_dg"/>
+            </inputs>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_KjWLTDWFEfCxL9oa-scBGQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:Task" xmi:id="_KjZOkDWFEfCxL9oa-scBGQ" name="Acrescentar à etiqueta S a informação do cliente" outgoing="_KlVIQDWFEfCxL9oa-scBGQ" incoming="_MwmfoEvDEfCdCpCjScmrww" overrideActorsOfTheLane="false" priority="1">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_KjZOkjWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_KjZOkTWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_KjZOkzWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_QW1N90xcEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_QW1N-ExcEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_QW1N-UxcEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_QW1N-kxcEfCvLMo-Ilf_dg" name="etiquetaInput.tipo" content="etiquetaInput?.tipo" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_QW1N-0xcEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_QW1N_ExcEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setTipo">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_QW1N_UxcEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_QW1N_kxcEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_QW1N_0xcEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_QW1OAExcEfCvLMo-Ilf_dg" name="etiquetaInput.nomeCliente" content="etiquetaInput?.nomeCliente" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_QW1OAUxcEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_QW1OAkxcEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setNomeCliente">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_QW1OA0xcEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_QW1OBExcEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_QW1OBUxcEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_QW1OBkxcEfCvLMo-Ilf_dg" name="etiquetaInput.numeroIncidente" content="etiquetaInput?.numeroIncidente?.trim() ? etiquetaInput.numeroIncidente.toLong() : null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_QW1OB0xcEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_QW1OCExcEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setNumeroIncidente">
+              <inputTypes>java.lang.Long</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_QW1OCUxcEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_QW1OCkxcEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_QW1OC0xcEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_QW1ODExcEfCvLMo-Ilf_dg" name="etiquetaInput.identificacaoProduto" content="etiquetaInput?.identificacaoProduto" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_QW1ODUxcEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_QW1ODkxcEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setIdentificacaoProduto">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_QW1OD0xcEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_QW1OEExcEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_QW1OEUxcEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_QW1OEkxcEfCvLMo-Ilf_dg" name="etiquetaInput.codigoProduto" content="etiquetaInput?.codigoProduto?.trim() ? etiquetaInput.codigoProduto.toLong() : null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_QW1OE0xcEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_QW1OFExcEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setCodigoProduto">
+              <inputTypes>java.lang.Long</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_QW1OFUxcEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_QW1OFkxcEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_QW1OF0xcEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_QW1OGExcEfCvLMo-Ilf_dg" name="etiquetaInput.descricao" content="etiquetaInput?.descricao" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_QW1OGUxcEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_QW1OGkxcEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setDescricao">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_QW1OG0xcEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_QW1OHExcEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_QW1OHUxcEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_QW1OHkxcEfCvLMo-Ilf_dg" name="etiquetaInput.delegacaoDestino" content="etiquetaInput?.delegacaoDestino" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_QW1OH0xcEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_QW1OIExcEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setDelegacaoDestino">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_KjZOlDWFEfCxL9oa-scBGQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_KjZOlTWFEfCxL9oa-scBGQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_KjZOljWFEfCxL9oa-scBGQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_KjZOmDWFEfCxL9oa-scBGQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_KjZOlzWFEfCxL9oa-scBGQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_KjZOmjWFEfCxL9oa-scBGQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_KjZOmzWFEfCxL9oa-scBGQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_Ssv8cExcEfCvLMo-Ilf_dg" name="newForm6" content="e2339a49-8d27-4d20-8991-05512a37d89e" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_KjZOmTWFEfCxL9oa-scBGQ"/>
+          <contract xmi:type="process:Contract" xmi:id="_KjZOmTWFEfCxL9oa-scBGQ">
+            <inputs xmi:type="process:ContractInput" xmi:id="_QW0m4ExcEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" dataReference="etiqueta" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_QW0m4UxcEfCvLMo-Ilf_dg" name="tipo" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_QW0m4kxcEfCvLMo-Ilf_dg" name="nomeCliente" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_QW0m40xcEfCvLMo-Ilf_dg" name="numeroIncidente" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_QW0m5ExcEfCvLMo-Ilf_dg" name="identificacaoProduto" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_QW0m5UxcEfCvLMo-Ilf_dg" name="codigoProduto" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_QW0m5kxcEfCvLMo-Ilf_dg" name="descricao" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_QW0m50xcEfCvLMo-Ilf_dg" name="delegacaoDestino" createMode="false"/>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_QW1N8ExcEfCvLMo-Ilf_dg" expression="etiquetaInput?.tipo != null" errorMessage="tipo is mandatory for Etiqueta" name="mandatory_etiquetaInput_tipo">
+              <inputNames>etiquetaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_QW1N8UxcEfCvLMo-Ilf_dg" expression="etiquetaInput?.nomeCliente != null" errorMessage="nomeCliente is mandatory for Etiqueta" name="mandatory_etiquetaInput_nomeCliente">
+              <inputNames>etiquetaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_QW1N8kxcEfCvLMo-Ilf_dg" expression="etiquetaInput?.numeroIncidente != null" errorMessage="numeroIncidente is mandatory for Etiqueta" name="mandatory_etiquetaInput_numeroIncidente">
+              <inputNames>etiquetaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_QW1N80xcEfCvLMo-Ilf_dg" expression="!etiquetaInput?.numeroIncidente || etiquetaInput?.numeroIncidente.isLong()" errorMessage="A Long value is expected for Etiqueta.numeroIncidente" name="type_long_etiquetaInput_numeroIncidente">
+              <inputNames>etiquetaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_QW1N9ExcEfCvLMo-Ilf_dg" expression="etiquetaInput?.identificacaoProduto != null" errorMessage="identificacaoProduto is mandatory for Etiqueta" name="mandatory_etiquetaInput_identificacaoProduto">
+              <inputNames>etiquetaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_QW1N9UxcEfCvLMo-Ilf_dg" expression="etiquetaInput?.codigoProduto != null" errorMessage="codigoProduto is mandatory for Etiqueta" name="mandatory_etiquetaInput_codigoProduto">
+              <inputNames>etiquetaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_QW1N9kxcEfCvLMo-Ilf_dg" expression="!etiquetaInput?.codigoProduto || etiquetaInput?.codigoProduto.isLong()" errorMessage="A Long value is expected for Etiqueta.codigoProduto" name="type_long_etiquetaInput_codigoProduto">
+              <inputNames>etiquetaInput</inputNames>
+            </constraints>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_KjZOnDWFEfCxL9oa-scBGQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:ServiceTask" xmi:id="_KjcR4DWFEfCxL9oa-scBGQ" name="Cancelamento do pedido de suporte" outgoing="_Klm1EDWFEfCxL9oa-scBGQ" incoming="_KljKsDWFEfCxL9oa-scBGQ">
+        <elements xmi:type="process:ServiceTask" xmi:id="_KjcR4DWFEfCxL9oa-scBGQ" name="Cancelamento do pedido dos componentes" outgoing="_Klm1EDWFEfCxL9oa-scBGQ" incoming="_KljKsDWFEfCxL9oa-scBGQ">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_KjcR4jWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_KjcR4TWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_KjcR4zWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
@@ -47,15 +159,90 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_Kjf8QjWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_Kjf8QTWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_Kjf8QzWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_cuzTakxgEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_cuzTa0xgEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_cuzTbExgEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_cuzTbUxgEfCvLMo-Ilf_dg" name="etiquetaInput.nomeCliente" content="etiquetaInput?.nomeCliente" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_cuzTbkxgEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_cuzTb0xgEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setNomeCliente">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_cuzTcExgEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_cuzTcUxgEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_cuzTckxgEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_cuzTc0xgEfCvLMo-Ilf_dg" name="etiquetaInput.identificacaoProduto" content="etiquetaInput?.identificacaoProduto" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_cuzTdExgEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_cuzTdUxgEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setIdentificacaoProduto">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_cuzTdkxgEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_cuzTd0xgEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_cuzTeExgEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_cuzTeUxgEfCvLMo-Ilf_dg" name="etiquetaInput.codigoProduto" content="etiquetaInput?.codigoProduto?.trim() ? etiquetaInput.codigoProduto.toLong() : null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_cuzTekxgEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_cuzTe0xgEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setCodigoProduto">
+              <inputTypes>java.lang.Long</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_cuzTfExgEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_cuzTfUxgEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_cuzTfkxgEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_cuzTf0xgEfCvLMo-Ilf_dg" name="etiquetaInput.descricao" content="etiquetaInput?.descricao" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_cuzTgExgEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_cuzTgUxgEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setDescricao">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_cuzTgkxgEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_cuzTg0xgEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_cuzThExgEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_cuzThUxgEfCvLMo-Ilf_dg" name="etiquetaInput.delegacaoDestino" content="etiquetaInput?.delegacaoDestino" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_cuzThkxgEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_cuzTh0xgEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setDelegacaoDestino">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_Kjf8RDWFEfCxL9oa-scBGQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_Kjf8RTWFEfCxL9oa-scBGQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_Kjf8RjWFEfCxL9oa-scBGQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_Kjf8SDWFEfCxL9oa-scBGQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_Kjf8RzWFEfCxL9oa-scBGQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_Kjf8SjWFEfCxL9oa-scBGQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_Kjf8SzWFEfCxL9oa-scBGQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_dk-GYExgEfCvLMo-Ilf_dg" name="newForm8" content="393b87c1-db98-4242-b913-975f6904ba9f" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_Kjf8STWFEfCxL9oa-scBGQ"/>
+          <contract xmi:type="process:Contract" xmi:id="_Kjf8STWFEfCxL9oa-scBGQ">
+            <inputs xmi:type="process:ContractInput" xmi:id="_cuzTYExgEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" dataReference="etiqueta" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_cuzTYUxgEfCvLMo-Ilf_dg" name="nomeCliente" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_cuzTYkxgEfCvLMo-Ilf_dg" name="identificacaoProduto" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_cuzTY0xgEfCvLMo-Ilf_dg" name="codigoProduto" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_cuzTZExgEfCvLMo-Ilf_dg" name="descricao" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_cuzTZUxgEfCvLMo-Ilf_dg" name="delegacaoDestino" createMode="false"/>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_cuzTZkxgEfCvLMo-Ilf_dg" expression="etiquetaInput?.nomeCliente != null" errorMessage="nomeCliente is mandatory for Etiqueta" name="mandatory_etiquetaInput_nomeCliente">
+              <inputNames>etiquetaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_cuzTZ0xgEfCvLMo-Ilf_dg" expression="etiquetaInput?.identificacaoProduto != null" errorMessage="identificacaoProduto is mandatory for Etiqueta" name="mandatory_etiquetaInput_identificacaoProduto">
+              <inputNames>etiquetaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_cuzTaExgEfCvLMo-Ilf_dg" expression="etiquetaInput?.codigoProduto != null" errorMessage="codigoProduto is mandatory for Etiqueta" name="mandatory_etiquetaInput_codigoProduto">
+              <inputNames>etiquetaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_cuzTaUxgEfCvLMo-Ilf_dg" expression="!etiquetaInput?.codigoProduto || etiquetaInput?.codigoProduto.isLong()" errorMessage="A Long value is expected for Etiqueta.codigoProduto" name="type_long_etiquetaInput_codigoProduto">
+              <inputNames>etiquetaInput</inputNames>
+            </constraints>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_Kjf8TDWFEfCxL9oa-scBGQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:Task" xmi:id="_Kji_kDWFEfCxL9oa-scBGQ" name="colocar na etiqueta (S)" outgoing="_LBhusEvDEfCdCpCjScmrww" incoming="_Kl1ekDWFEfCxL9oa-scBGQ" overrideActorsOfTheLane="false" priority="1">
@@ -63,15 +250,195 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_Kji_kjWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_Kji_kTWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_Kji_kzWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_yw3JQExIEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_yw3JQUxIEfCvLMo-Ilf_dg" name="" content=""/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_yw3JQ0xIEfCvLMo-Ilf_dg" name="etiquetaInput.tipo" content="     ?.tipo" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_yw3JRUxIEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setTipo">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_yw3JRkxIEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_yw3JR0xIEfCvLMo-Ilf_dg" name="" content=""/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_yw3JSUxIEfCvLMo-Ilf_dg" name="etiquetaInput.nomeCliente" content="     ?.nomeCliente" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_yw3JS0xIEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setNomeCliente">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_yw3JTExIEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_yw3JTUxIEfCvLMo-Ilf_dg" name="" content=""/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_yw3JT0xIEfCvLMo-Ilf_dg" name="etiquetaInput.numeroIncidente" content="     ?.numeroIncidente?.trim() ?      .numeroIncidente.toLong() : null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
+            <operator xmi:type="expression:Operator" xmi:id="_yw3JUUxIEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setNumeroIncidente">
+              <inputTypes>java.lang.Long</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_yw3JUkxIEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_yw3JU0xIEfCvLMo-Ilf_dg" name="" content=""/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_yw3JVUxIEfCvLMo-Ilf_dg" name="etiquetaInput.identificacaoProduto" content="     .identificacaoProduto" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_yw3JV0xIEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setIdentificacaoProduto">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_yw3JWExIEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_yw3JWUxIEfCvLMo-Ilf_dg" name="" content=""/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_yw3JW0xIEfCvLMo-Ilf_dg" name="etiquetaInput.codigoProduto" content="     ?.codigoProduto?.trim() ?      .codigoProduto.toLong() : null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
+            <operator xmi:type="expression:Operator" xmi:id="_yw3JXUxIEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setCodigoProduto">
+              <inputTypes>java.lang.Long</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_5fJ7X0xKEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_5fJ7YExKEfCvLMo-Ilf_dg" name="" content=""/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_5fJ7YkxKEfCvLMo-Ilf_dg" name="etiquetaInput.tipo" content="     ?.tipo" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_5fJ7ZExKEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setTipo">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_5fJ7ZUxKEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_5fJ7ZkxKEfCvLMo-Ilf_dg" name="" content=""/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_5fJ7aExKEfCvLMo-Ilf_dg" name="etiquetaInput.nomeCliente" content="     ?.nomeCliente" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_5fJ7akxKEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setNomeCliente">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_5fJ7a0xKEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_5fJ7bExKEfCvLMo-Ilf_dg" name="" content=""/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_5fJ7bkxKEfCvLMo-Ilf_dg" name="etiquetaInput.numeroIncidente" content="     ?.numeroIncidente?.trim() ?      .numeroIncidente.toLong() : null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
+            <operator xmi:type="expression:Operator" xmi:id="_5fJ7cExKEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setNumeroIncidente">
+              <inputTypes>java.lang.Long</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_5fJ7cUxKEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_5fJ7ckxKEfCvLMo-Ilf_dg" name="" content=""/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_5fJ7dExKEfCvLMo-Ilf_dg" name="etiquetaInput.identificacaoProduto" content="     ?.identificacaoProduto" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_5fJ7dkxKEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setIdentificacaoProduto">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_5fJ7d0xKEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_5fJ7eExKEfCvLMo-Ilf_dg" name="" content=""/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_5fJ7ekxKEfCvLMo-Ilf_dg" name="etiquetaInput.codigoProduto" content="     ?.codigoProduto?.trim() ?      .codigoProduto.toLong() : null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
+            <operator xmi:type="expression:Operator" xmi:id="_5fJ7fExKEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setCodigoProduto">
+              <inputTypes>java.lang.Long</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_5fJ7fUxKEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_5fJ7fkxKEfCvLMo-Ilf_dg" name="" content=""/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_5fJ7gExKEfCvLMo-Ilf_dg" name="etiquetaInput.descricao" content="     ?.descricao" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_5fJ7gkxKEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setDescricao">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_5fJ7g0xKEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_5fJ7hExKEfCvLMo-Ilf_dg" name="" content=""/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_5fJ7hkxKEfCvLMo-Ilf_dg" name="etiquetaInput.delegacaoDestino" content="     ?.delegacaoDestino" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_5fJ7iExKEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setDelegacaoDestino">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_c-pgjUxQEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_c-pgjkxQEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_c-pgj0xQEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_c-pgkExQEfCvLMo-Ilf_dg" name="etiquetaInput.tipo" content="etiquetaInput?.tipo" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_c-pgkUxQEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_c-pgkkxQEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setTipo">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_c-pgk0xQEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_c-pglExQEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_c-pglUxQEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_c-pglkxQEfCvLMo-Ilf_dg" name="etiquetaInput.numeroIncidente" content="etiquetaInput?.numeroIncidente?.trim() ? etiquetaInput.numeroIncidente.toLong() : null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_c-pgl0xQEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_c-pgmExQEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setNumeroIncidente">
+              <inputTypes>java.lang.Long</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_c-pgmUxQEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_c-pgmkxQEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_c-pgm0xQEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_c-pgnExQEfCvLMo-Ilf_dg" name="etiquetaInput.identificacaoProduto" content="etiquetaInput?.identificacaoProduto" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_c-pgnUxQEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_c-pgnkxQEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setIdentificacaoProduto">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_c-pgn0xQEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_c-pgoExQEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_c-pgoUxQEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_c-pgokxQEfCvLMo-Ilf_dg" name="etiquetaInput.codigoProduto" content="etiquetaInput?.codigoProduto?.trim() ? etiquetaInput.codigoProduto.toLong() : null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_c-pgo0xQEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_c-pgpExQEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setCodigoProduto">
+              <inputTypes>java.lang.Long</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_c-pgpUxQEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_c-pgpkxQEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_c-pgp0xQEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_c-pgqExQEfCvLMo-Ilf_dg" name="etiquetaInput.descricao" content="etiquetaInput?.descricao" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_c-pgqUxQEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_c-pgqkxQEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setDescricao">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_c-pgq0xQEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_c-pgrExQEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_c-pgrUxQEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_c-pgrkxQEfCvLMo-Ilf_dg" name="etiquetaInput.delegacaoDestino" content="etiquetaInput?.delegacaoDestino" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_c-pgr0xQEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_c-pgsExQEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setDelegacaoDestino">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_Kji_lDWFEfCxL9oa-scBGQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_Kji_lTWFEfCxL9oa-scBGQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_Kji_ljWFEfCxL9oa-scBGQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_Kji_mDWFEfCxL9oa-scBGQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_Kji_lzWFEfCxL9oa-scBGQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_Kji_mjWFEfCxL9oa-scBGQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_Kji_mzWFEfCxL9oa-scBGQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_6ZOSsExREfCvLMo-Ilf_dg" name="newForm5" content="e281fb0c-3313-4c7c-b0d5-6763ee71fd54" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_Kji_mTWFEfCxL9oa-scBGQ"/>
+          <contract xmi:type="process:Contract" xmi:id="_Kji_mTWFEfCxL9oa-scBGQ">
+            <inputs xmi:type="process:ContractInput" xmi:id="_c-pggExQEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" dataReference="etiqueta" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_c-pggUxQEfCvLMo-Ilf_dg" name="tipo" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_c-pggkxQEfCvLMo-Ilf_dg" name="numeroIncidente" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_c-pgg0xQEfCvLMo-Ilf_dg" name="identificacaoProduto" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_c-pghExQEfCvLMo-Ilf_dg" name="codigoProduto" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_c-pghUxQEfCvLMo-Ilf_dg" name="descricao" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_c-pghkxQEfCvLMo-Ilf_dg" name="delegacaoDestino" createMode="false"/>
+            </inputs>
+            <inputs xmi:type="process:ContractInput" xmi:id="_28KV8ExREfCvLMo-Ilf_dg" name="venderAoCliente">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_28KV8UxREfCvLMo-Ilf_dg"/>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_c-pgh0xQEfCvLMo-Ilf_dg" expression="etiquetaInput?.tipo != null" errorMessage="tipo is mandatory for Etiqueta" name="mandatory_etiquetaInput_tipo">
+              <inputNames>etiquetaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_c-pgiExQEfCvLMo-Ilf_dg" expression="etiquetaInput?.numeroIncidente != null" errorMessage="numeroIncidente is mandatory for Etiqueta" name="mandatory_etiquetaInput_numeroIncidente">
+              <inputNames>etiquetaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_c-pgiUxQEfCvLMo-Ilf_dg" expression="!etiquetaInput?.numeroIncidente || etiquetaInput?.numeroIncidente.isLong()" errorMessage="A Long value is expected for Etiqueta.numeroIncidente" name="type_long_etiquetaInput_numeroIncidente">
+              <inputNames>etiquetaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_c-pgikxQEfCvLMo-Ilf_dg" expression="etiquetaInput?.identificacaoProduto != null" errorMessage="identificacaoProduto is mandatory for Etiqueta" name="mandatory_etiquetaInput_identificacaoProduto">
+              <inputNames>etiquetaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_c-pgi0xQEfCvLMo-Ilf_dg" expression="etiquetaInput?.codigoProduto != null" errorMessage="codigoProduto is mandatory for Etiqueta" name="mandatory_etiquetaInput_codigoProduto">
+              <inputNames>etiquetaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_c-pgjExQEfCvLMo-Ilf_dg" expression="!etiquetaInput?.codigoProduto || etiquetaInput?.codigoProduto.isLong()" errorMessage="A Long value is expected for Etiqueta.codigoProduto" name="type_long_etiquetaInput_codigoProduto">
+              <inputNames>etiquetaInput</inputNames>
+            </constraints>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_Kji_nDWFEfCxL9oa-scBGQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:EndEvent" xmi:id="_Kjlb0DWFEfCxL9oa-scBGQ" name="Fim do processo 2" incoming="_MGSXUEvDEfCdCpCjScmrww">
@@ -105,14 +472,77 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_Kj8oMjWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_Kj8oMTWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_Kj8oMzWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
-          <operations xmi:type="expression:Operation" xmi:id="_1YbC00vDEfCdCpCjScmrww">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_1YbC1EvDEfCdCpCjScmrww" name="produto" content="produto" type="TYPE_VARIABLE" returnType="com.company.model.Produto">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_1YbC1UvDEfCdCpCjScmrww" name="produto" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Produto"/>
+          <operations xmi:type="expression:Operation" xmi:id="_LnNwE0xPEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_LnNwFExPEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_LnNwFUxPEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_1YbC1kvDEfCdCpCjScmrww" name="produtoInput.identificacaoProduto" content="produtoInput?.identificacaoProduto" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_1YbC10vDEfCdCpCjScmrww" name="produtoInput" type="COMPLEX" createMode="false"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_LnNwFkxPEfCvLMo-Ilf_dg" name="etiquetaInput.identificacaoProduto" content="etiquetaInput?.identificacaoProduto" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_LnNwF0xPEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_1YbC2EvDEfCdCpCjScmrww" type="JAVA_METHOD" expression="setIdentificacaoProduto">
+            <operator xmi:type="expression:Operator" xmi:id="_LnNwGExPEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setIdentificacaoProduto">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_MZF48ExPEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_MZF48UxPEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_MZF48kxPEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_MZF480xPEfCvLMo-Ilf_dg" name="etiquetaInput1.tipo" content="     ?.tipo" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_MZF49UxPEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setTipo">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_MZF49kxPEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_MZF490xPEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_MZF4-ExPEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_MZF4-UxPEfCvLMo-Ilf_dg" name="etiquetaInput1.nomeCliente" content="     ?.nomeCliente" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_MZF4-0xPEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setNomeCliente">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_MZF4_ExPEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_MZF4_UxPEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_MZF4_kxPEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_MZF4_0xPEfCvLMo-Ilf_dg" name="etiquetaInput1.numeroIncidente" content="     ?.numeroIncidente?.trim() ?      .numeroIncidente.toLong() : null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
+            <operator xmi:type="expression:Operator" xmi:id="_MZF5AUxPEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setNumeroIncidente">
+              <inputTypes>java.lang.Long</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_MZF5AkxPEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_MZF5A0xPEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_MZF5BExPEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_MZF5BUxPEfCvLMo-Ilf_dg" name="etiquetaInput1.identificacaoProduto" content="     ?.identificacaoProduto" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_MZF5B0xPEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setIdentificacaoProduto">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_MZF5CExPEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_MZF5CUxPEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_MZF5CkxPEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_MZF5C0xPEfCvLMo-Ilf_dg" name="etiquetaInput1.codigoProduto" content="     ?.codigoProduto?.trim() ?      .codigoProduto.toLong() : null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
+            <operator xmi:type="expression:Operator" xmi:id="_MZF5DUxPEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setCodigoProduto">
+              <inputTypes>java.lang.Long</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_MZF5DkxPEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_MZF5D0xPEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_MZF5EExPEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_MZF5EUxPEfCvLMo-Ilf_dg" name="etiquetaInput1.descricao" content="     ?.descricao" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_MZF5E0xPEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setDescricao">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_MZF5FExPEfCvLMo-Ilf_dg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_MZF5FUxPEfCvLMo-Ilf_dg" name="etiqueta" content="etiqueta" type="TYPE_VARIABLE" returnType="com.company.model.Etiqueta">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_MZF5FkxPEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_MZF5F0xPEfCvLMo-Ilf_dg" name="etiquetaInput1.delegacaoDestino" content="     ?.delegacaoDestino" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_MZF5GUxPEfCvLMo-Ilf_dg" type="JAVA_METHOD" expression="setDelegacaoDestino">
               <inputTypes>java.lang.String</inputTypes>
             </operator>
           </operations>
@@ -122,15 +552,12 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_Kj8oODWFEfCxL9oa-scBGQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_Kj8oNzWFEfCxL9oa-scBGQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_Kj8oOjWFEfCxL9oa-scBGQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_3nmQIEvDEfCdCpCjScmrww" name="RececaoIdentificarProduto" content="f664be8c-c5d2-436d-a839-4f9d3bd91623" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_Pj3L0ExPEfCvLMo-Ilf_dg" name="newForm4" content="a85f1119-a6e0-4ea3-9b2c-571663f0ce5f" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_Kj8oOTWFEfCxL9oa-scBGQ">
-            <inputs xmi:type="process:ContractInput" xmi:id="_1YbC0EvDEfCdCpCjScmrww" name="produtoInput" type="COMPLEX" dataReference="produto" createMode="false">
-              <inputs xmi:type="process:ContractInput" xmi:id="_1YbC0UvDEfCdCpCjScmrww" name="identificacaoProduto" createMode="false"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_LnNwEExPEfCvLMo-Ilf_dg" name="etiquetaInput" type="COMPLEX" dataReference="etiqueta" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_LnNwEUxPEfCvLMo-Ilf_dg" name="identificacaoProduto" createMode="false"/>
             </inputs>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_1YbC0kvDEfCdCpCjScmrww" expression="produtoInput?.identificacaoProduto != null" errorMessage="identificacaoProduto is mandatory for Produto" name="mandatory_produtoInput_identificacaoProduto">
-              <inputNames>produtoInput</inputNames>
-            </constraints>
           </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_Kj8oPDWFEfCxL9oa-scBGQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
@@ -198,7 +625,7 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_KkHnUDWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_KkHnUjWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:XORGateway" xmi:id="_J2iiQEvDEfCdCpCjScmrww" name="Produto do Stock para ser vendido ao cliente? " outgoing="_MGSXUEvDEfCdCpCjScmrww _MwmfoEvDEfCdCpCjScmrww" incoming="_LBhusEvDEfCdCpCjScmrww">
+        <elements xmi:type="process:XORGateway" xmi:id="_J2iiQEvDEfCdCpCjScmrww" name="Produto do Stock para ser vendido a cliente? " outgoing="_MGSXUEvDEfCdCpCjScmrww _MwmfoEvDEfCdCpCjScmrww" incoming="_LBhusEvDEfCdCpCjScmrww">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_J2iiQkvDEfCdCpCjScmrww" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_J2iiQUvDEfCdCpCjScmrww" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_J2iiQ0vDEfCdCpCjScmrww" name="" content="" returnTypeFixed="true"/>
@@ -313,9 +740,6 @@
         </elements>
         <elements xmi:type="process:TextAnnotation" xmi:id="_qj62oExAEfCM0prHvYE6XA" name="Copy of Copy of Copy of " text="username: favio.riviera&#xD;&#xA;password: bpm"/>
       </elements>
-      <data xmi:type="process:BusinessObjectData" xmi:id="_0j0S4Eu_EfCdCpCjScmrww" name="produto" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Produto">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_0j0S4Uu_EfCdCpCjScmrww" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
-      </data>
       <data xmi:type="process:Data" xmi:id="_7Gn4kEu_EfCdCpCjScmrww" name="passouVerificacao" dataType="_KhnF4zWFEfCxL9oa-scBGQ">
         <defaultValue xmi:type="expression:Expression" xmi:id="_7Gn4kUu_EfCdCpCjScmrww" name="init_passouVerificacao()" content="false" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean"/>
       </data>
@@ -325,8 +749,14 @@
       <data xmi:type="process:Data" xmi:id="_iePzMExEEfCM0prHvYE6XA" name="passouVerificacaoTecnico" dataType="_KhnF4zWFEfCxL9oa-scBGQ">
         <defaultValue xmi:type="expression:Expression" xmi:id="_iePzMUxEEfCM0prHvYE6XA" name="init_passouVerificacaoTecnico()" content="false" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean"/>
       </data>
+      <data xmi:type="process:Data" xmi:id="_BgV1cExJEfCvLMo-Ilf_dg" name="venderAoCliente" dataType="_KhnF6DWFEfCxL9oa-scBGQ">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_BgV1cUxJEfCvLMo-Ilf_dg" content=""/>
+      </data>
+      <data xmi:type="process:BusinessObjectData" xmi:id="__LYhgExOEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta">
+        <defaultValue xmi:type="expression:Expression" xmi:id="__LYhgUxOEfCvLMo-Ilf_dg" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
+      </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_Kh4ywDWFEfCxL9oa-scBGQ">
-        <targetForm xmi:type="expression:Expression" xmi:id="_Kh4ywTWFEfCxL9oa-scBGQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_Ho8pEExiEfCvLMo-Ilf_dg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_Kh4ywjWFEfCxL9oa-scBGQ">
         <targetForm xmi:type="expression:Expression" xmi:id="_Kh4ywzWFEfCxL9oa-scBGQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -353,8 +783,8 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_Kl1ekDWFEfCxL9oa-scBGQ" name="Stock ou consumo Interno" target="_Kji_kDWFEfCxL9oa-scBGQ" source="_KkO8EDWFEfCxL9oa-scBGQ">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_Kl1ekTWFEfCxL9oa-scBGQ"/>
-        <condition xmi:type="expression:Expression" xmi:id="_Kl1ekjWFEfCxL9oa-scBGQ" name="Consumo interno || Encomenda para Cliente" content="produto.identificacaoProduto == &quot;Stock&quot; || produto.identificacaoProduto == &quot;Consumo Interno&quot;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
-          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_98ansEvEEfCdCpCjScmrww" name="produto" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Produto"/>
+        <condition xmi:type="expression:Expression" xmi:id="_Kl1ekjWFEfCxL9oa-scBGQ" name="stock" content="etiqueta.identificacaoProduto == &quot;Stock&quot;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_zhMxUExZEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
         </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_KmBEwDWFEfCxL9oa-scBGQ" name="não" target="_KjpGMDWFEfCxL9oa-scBGQ" source="_I4MyEEvAEfCdCpCjScmrww">
@@ -371,12 +801,12 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_KmcikDWFEfCxL9oa-scBGQ" target="_KkO8EDWFEfCxL9oa-scBGQ" source="_Kj8oMDWFEfCxL9oa-scBGQ">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_KmcikTWFEfCxL9oa-scBGQ"/>
-        <condition xmi:type="expression:Expression" xmi:id="_KmcikjWFEfCxL9oa-scBGQ" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_KmcikjWFEfCxL9oa-scBGQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_Kmg0ADWFEfCxL9oa-scBGQ" name="Encomendas para o cliente" target="_Kj_rgDWFEfCxL9oa-scBGQ" source="_KkO8EDWFEfCxL9oa-scBGQ">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_Kmg0ATWFEfCxL9oa-scBGQ"/>
-        <condition xmi:type="expression:Expression" xmi:id="_Kmg0AjWFEfCxL9oa-scBGQ" name="Encomenda para Cliente" content="produto.identificacaoProduto == &quot;Encomenda para Cliente&quot;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
-          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_FChHsEvFEfCdCpCjScmrww" name="produto" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Produto"/>
+        <condition xmi:type="expression:Expression" xmi:id="_Kmg0AjWFEfCxL9oa-scBGQ" name="Encomenda para Cliente" content="etiqueta.identificacaoProduto == &quot;Pronto para entrega&quot;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_FcxKkExQEfCvLMo-Ilf_dg" name="etiqueta" dataType="_KhnF6zWFEfCxL9oa-scBGQ" className="com.company.model.Etiqueta"/>
         </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_KmmTkDWFEfCxL9oa-scBGQ" target="_KkTNgDWFEfCxL9oa-scBGQ" source="_Kj_rgDWFEfCxL9oa-scBGQ" isDefault="true">
@@ -417,11 +847,15 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_MGSXUEvDEfCdCpCjScmrww" name="Não" target="_Kjlb0DWFEfCxL9oa-scBGQ" source="_J2iiQEvDEfCdCpCjScmrww">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_MGSXUUvDEfCdCpCjScmrww"/>
-        <condition xmi:type="expression:Expression" xmi:id="_MGSXUkvDEfCdCpCjScmrww" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_MGSXUkvDEfCdCpCjScmrww" name="newScript()" content="venderAoCliente == &quot;Não&quot;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:Data" xmi:id="_J-ekwExcEfCvLMo-Ilf_dg" name="venderAoCliente" dataType="_KhnF6DWFEfCxL9oa-scBGQ"/>
+        </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_MwmfoEvDEfCdCpCjScmrww" name="Sim" target="_KjZOkDWFEfCxL9oa-scBGQ" source="_J2iiQEvDEfCdCpCjScmrww">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_MwmfoUvDEfCdCpCjScmrww"/>
-        <condition xmi:type="expression:Expression" xmi:id="_MwmfokvDEfCdCpCjScmrww" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_MwmfokvDEfCdCpCjScmrww" name="newScript()" content="venderAoCliente == &quot;Sim&quot;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:Data" xmi:id="_Mf4xkExcEfCvLMo-Ilf_dg" name="venderAoCliente" dataType="_KhnF6DWFEfCxL9oa-scBGQ"/>
+        </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_Pev88Ew8EfCM0prHvYE6XA" target="_MUC7gEw8EfCM0prHvYE6XA" source="_KkTNgDWFEfCxL9oa-scBGQ">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_Pev88Uw8EfCM0prHvYE6XA"/>
@@ -568,7 +1002,7 @@
               <styles xmi:type="notation:DescriptionStyle" xmi:id="_PuFD4UB_EfChyqxcNv9y4A"/>
               <styles xmi:type="notation:FontStyle" xmi:id="_PuFq8EB_EfChyqxcNv9y4A" fontName="Segoe UI"/>
               <styles xmi:type="notation:LineStyle" xmi:id="_PuFq8UB_EfChyqxcNv9y4A"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PuFq8kB_EfChyqxcNv9y4A" x="542" y="34" width="248" height="84"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PuFq8kB_EfChyqxcNv9y4A" x="1011" y="17" width="248" height="84"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_ToS2sUB_EfChyqxcNv9y4A" type="3015" element="_ToS2sEB_EfChyqxcNv9y4A">
               <children xmi:type="notation:DecorationNode" xmi:id="_ToS2tkB_EfChyqxcNv9y4A" type="5010"/>
