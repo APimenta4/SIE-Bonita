@@ -301,12 +301,12 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_KjpGMTWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_KjpGMzWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:EndEvent" xmi:id="_KjvM0DWFEfCxL9oa-scBGQ" name="Pronto para entrega" incoming="_KlaAwDWFEfCxL9oa-scBGQ">
+        <elements xmi:type="process:EndEvent" xmi:id="_KjvM0DWFEfCxL9oa-scBGQ" name="Pronto para entrega (Produto do Stock)" incoming="_KlaAwDWFEfCxL9oa-scBGQ">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_Kjvz4TWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_Kjvz4DWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_Kjvz4jWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:EndEvent" xmi:id="_KjyQIDWFEfCxL9oa-scBGQ" name="Pronto para entrega" incoming="_Klv_ADWFEfCxL9oa-scBGQ">
+        <elements xmi:type="process:EndEvent" xmi:id="_KjyQIDWFEfCxL9oa-scBGQ" name="Pronto para entrega (Produto para cliente)" incoming="_Klv_ADWFEfCxL9oa-scBGQ">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_Kjy3MTWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_Kjy3MDWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_Kjy3MjWFEfCxL9oa-scBGQ" name="" content="" returnTypeFixed="true"/>
@@ -626,7 +626,7 @@
         </defaultValue>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_Kh4ywDWFEfCxL9oa-scBGQ">
-        <targetForm xmi:type="expression:Expression" xmi:id="_ZeiNYE6NEfCco61xUvnDvw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_G0MJ4FHJEfCr3ObIQb-B2g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_Kh4ywjWFEfCxL9oa-scBGQ">
         <targetForm xmi:type="expression:Expression" xmi:id="_Kh4ywzWFEfCxL9oa-scBGQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
